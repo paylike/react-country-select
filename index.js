@@ -6,10 +6,17 @@ var countries = require('paylike-countries');
 module.exports = render;
 
 function render( props ){
+	var classes = [];
+
+	classes.push(props.className ? props.className : 'country-select');
+
+	if (props.value === null || props.value === '')
+		classes.push('initial');
+
 	return ce('select', {
 		value: props.value,
 		required: props.required,
-		className: props.className || 'country-select',
+		className: classes.join(' '),
 
 		onChange: function( e ){
 			props.onChange && props.onChange(e.target.value);
