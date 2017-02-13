@@ -1,7 +1,7 @@
 'use strict';
 
 var ce = require('react').createElement;
-var countries = require('paylike-countries');
+var countries = require('@paylike/countries');
 
 module.exports = render;
 
