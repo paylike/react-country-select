@@ -21,6 +21,7 @@ ReactDOM.render(CountrySelect, {
 	required,
 	initial,		// set a text to display in an initial option
 	className,
+	exclude, // Array of country codes to exclude
 
 	onChange: function( country ){},
 	*/

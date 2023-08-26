@@ -25,7 +25,10 @@ function render(props) {
 		},
 		props.initial && ce('option', {value: ''}, props.initial),
 
-		countries.map((c) =>
+		(props.exclude && Array.isArray(props.exclude)
+			? countries.filter(({code}) => !props.exclude.includes(code))
+			: countries
+		).map((c) =>
 			ce(
 				'option',
 				{
