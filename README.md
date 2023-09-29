@@ -22,6 +22,7 @@ ReactDOM.render(CountrySelect, {
 	initial,		// set a text to display in an initial option
 	className,
 	exclude, // Array of country codes to exclude
+	filter, // function to filter countries (( { code, currency, name } ) => Boolean)
 
 	onChange: function( country ){},
 	*/
